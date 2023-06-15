@@ -12,9 +12,9 @@ test('subtractAsync subtracts numbers asynchronously', async () => {
   expect(result).toBe(expected)
 })
 
-async function test(title, callback) {
+function test(title, callback) {
   try {
-    await callback()
+    callback()
     console.log(`✓ ${title}`)
   } catch (error) {
     console.error(`✕ ${title}`)
